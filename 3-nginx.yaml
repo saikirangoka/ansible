@@ -10,7 +10,7 @@
     ansible.builtin.service:
       name: nginx
       state: started
-  - name: Enable service httpd, and not touch the state
+  - name: Enable service nginx, and not touch the state
     ansible.builtin.service:
-      name: httpd
+      name: nginx
       enabled: yes
