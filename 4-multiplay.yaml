@@ -1,0 +1,15 @@
+- name: play 1
+  hosts: local
+  connection: local # managing own system without using credentials
+  tasks:
+    - name: printing
+      ansible.builtin.debug:
+        msg: "Hello form play1"
+
+- name: play2
+  hosts: local
+  connection: local
+  tasks:
+    - name: printing
+      ansible.builtin.debug:
+        msg: "Hello frtom play2"
