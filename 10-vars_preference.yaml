@@ -11,8 +11,10 @@
   - name: Greeting are
     prompt: Enter the value
     private: false
-    
+
   tasks:
   - name: Greetings
+    vars:
+      Greet: "Hi sikii"
     ansible.builtin.debug:
       msg: "Greetings are {{ Greet }}"
