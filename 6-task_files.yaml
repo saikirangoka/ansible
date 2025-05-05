@@ -1,0 +1,9 @@
+- name: EXecuting
+  hosts: local
+  connection: local
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: print course information
+    ansible.builtin.package:
+      msg: "course is {{ COURSE }}, duration is {{ DURATION }}, student is {{ STUDENT }}"
