@@ -3,15 +3,12 @@
   connection: local
   vars:
     Greet: "Hi sai"
-  
   vars_files:
   - vars.yaml
-
   vars_prompt:
   - name: Greeting are
     prompt: Enter the value
     private: false
-
   tasks:
   - name: Greetings
     vars:
