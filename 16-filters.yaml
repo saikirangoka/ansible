@@ -3,5 +3,5 @@
   connection: local
   tasks:
   - name: handle undefine variable
-    ansible.buitin.debug:
+    ansible.builtin.debug:
       msg: "{{ person }}"
