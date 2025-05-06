@@ -1,15 +1,14 @@
-- name: check value greater than 10
-  hosts: local
-  connection: local
-  vars:
-    number_my: 9
+- name: installing  nginx
+  hosts: webs
   tasks:
-  - name: print if number greater than 10
-    ansible.builtin.debug:
-      msg: "number is greater than 10"
-    when: number_my > 10
+  - name: installing nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: installed
+    when: ansible_os_family == "RedHat"
 
-  - name: print if number less than or equal to 10
-    ansible.builtin.debug:
-      msg: "number is less than 10"
-    when: number_my <= 10
+  - name: installing nginx
+    ansible.builtin.apt:
+      name: nginx
+      state: installed
+    when: ansible_os_family == "Debian"
