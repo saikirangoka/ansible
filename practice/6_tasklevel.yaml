@@ -1,0 +1,16 @@
+- name: playlevel
+  hosts: local
+  connection: local
+  vars:
+    project: bhp
+    environment1: dev
+  tasks:
+  - name: playlevel
+    vars:
+      project: "British Telecom"
+    ansible.builtin.debug:
+      msg: "I worked on {{ project }} project and in environment {{ environment1 }}"
+
+  - name: playlevel
+    ansible.builtin.debug:
+      msg: "I worked on {{ project }} project and in environment {{ environment1 }}"
