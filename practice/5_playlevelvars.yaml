@@ -3,12 +3,12 @@
   connection: local
   vars:
     project: bhp
-    environment: dev
+    environment1: dev
   tasks:
   - name: playlevel
     ansible.builtin.debug:
-      msg: "I worked on {{ project }} project and in environment {{ environment }}"
+      msg: "I worked on {{ project }} project and in environment {{ environment1 }}"
 
   - name: playlevel
     ansible.builtin.debug:
-      msg: "I worked on {{ project }} project and in environment {{ environment }}"
+      msg: "I worked on {{ project }} project and in environment {{ environment1 }}"
