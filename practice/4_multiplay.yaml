@@ -1,0 +1,21 @@
+- name: multiplay
+  hosts: local
+  connection: local
+  tasks:
+  - name: printing
+    ansible.builtin.debug:
+      msg: "This is from play1 & task1"
+  - name: printing
+    ansible.builtin.debug:
+      msg: "This is from play1 & task2"
+
+- name: multiplay
+  hosts: local
+  connection: local
+  tasks:
+  - name: printing
+    ansible.builtin.debug:
+      msg: "This is from play2 & task1"
+  - name: printing
+    ansible.builtin.debug:
+      msg: "This is from play2 & task2"
