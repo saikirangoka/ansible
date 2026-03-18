@@ -1,0 +1,9 @@
+- name: varfile
+  hosts: local
+  connection: local
+  vars_file:
+  - course.yaml
+  tasks:
+  - name: varfile
+    ansible.builtin.debug:
+      msg: "I worked on {{ project }} project and in environment {{ environment1 }}"
